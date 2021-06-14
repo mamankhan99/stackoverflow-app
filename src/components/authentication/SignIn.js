@@ -26,7 +26,6 @@ const SignIn = () => {
         password: Yup.string().required('Password is Required.'),
     })
 
-
     return (
         <Formik
             initialValues={initialValues}
@@ -43,8 +42,11 @@ const SignIn = () => {
                     <Field type='password' id='password' name='password'/>
                     <ErrorMessage name = 'password'/>
                 </div>
-
-                <button type='submit'>Submit</button>
+                
+                <button type='submit' disabled={loading}>Submit</button>
+                {
+                    error && <div>Invalid Credentials</div>
+                }
             </Form>
         </Formik>
     )
