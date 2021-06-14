@@ -5,6 +5,7 @@ import storage from 'redux-persist/lib/storage';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {applyMiddleware, combineReducers, createStore} from 'redux';
 import authenticationReducer from './ducks/authentication';
+import registrationReducer from './ducks/registration';
 
 
 const persistConfig = {
@@ -12,6 +13,8 @@ const persistConfig = {
     storage,
     blacklist: [
         'authentication',
+        'registration',
+
     ]
 }
 
@@ -26,7 +29,7 @@ const reducer = combineReducers({
         authenticationPersistConfig,
         authenticationReducer,
     ),
-    
+    registration: registrationReducer,
 });
 
 const store = createStore(
