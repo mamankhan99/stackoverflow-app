@@ -6,6 +6,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {applyMiddleware, combineReducers, createStore} from 'redux';
 import authenticationReducer from './ducks/authentication';
 import registrationReducer from './ducks/registration';
+import profileReducer from './ducks/profile';
 
 
 const persistConfig = {
@@ -14,6 +15,7 @@ const persistConfig = {
     blacklist: [
         'authentication',
         'registration',
+        'profile',
 
     ]
 }
@@ -30,6 +32,8 @@ const reducer = combineReducers({
         authenticationReducer,
     ),
     registration: registrationReducer,
+    profile: profileReducer,
+
 });
 
 const store = createStore(
