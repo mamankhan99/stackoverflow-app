@@ -4,3 +4,4 @@ export const LOGIN_URL = `${SERVER_IP}login/`;
 export const REGISTERATION_URL = `${SERVER_IP}register/`;
 export const USER_API_URL = `${SERVER_IP}user/`;
 export const PROFILE_URL = `${SERVER_IP}profile/`;
+export const QUESTION_API_URL = `${SERVER_IP}question/`;
