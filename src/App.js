@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignIn from './components/authentication/SignIn';
 import PublicRoute from './components/routes/PublicRoute';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 import SignUp from './components/registration/SignUp';
+import PrivateContent from './components/routes/PrivateContent';
 
 const theme = createMuiTheme({
   mixins:{
@@ -21,6 +22,7 @@ function App() {
             <Switch>              
               <PublicRoute component={SignIn} exact path='/login'/>
               <PublicRoute component={SignUp} exact path='/signup'/>
+              <Route component={PrivateContent}/>
             </Switch>
         </div>
       </ThemeProvider>
