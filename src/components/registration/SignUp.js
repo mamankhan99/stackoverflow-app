@@ -20,7 +20,6 @@ const SignUp = () => {
 
     const onSubmit = values => {
         dispatch(signup(values));
-        console.log('Form Data', values)
     }
 
     const validationSchema = Yup.object({
