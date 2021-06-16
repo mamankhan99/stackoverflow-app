@@ -27,11 +27,24 @@ const SignedInButtons = () => {
 
     return (
         <Box className={classes.root}>
+          
             <Button
                 variant="contained"
                 color="primary"
-                href="/login">
-              My profile
+                href="/">
+              Home
+            </Button>
+            <Button
+                variant="contained"
+                color="primary"
+                href={`/${user.username}`}>
+              Profile
+            </Button>
+            <Button
+                variant="contained"
+                color="primary"
+                href="/add_question">
+              Add Question
             </Button>
             <Button
                  variant="contained"

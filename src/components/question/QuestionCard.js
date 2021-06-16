@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link }from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import { Card, CardHeader, CardActions, Box } from '@material-ui/core';
 import { Button } from '@material-ui/core';
@@ -38,7 +37,8 @@ export default function QuestionCard({question}) {
             </Box>
         </CardContent>
         <CardActions>
-                <Button 
+                <Button
+                    href={`/q/${question.id}`}
                     size="small"
                     variant='outlined'
                     color='primary'>

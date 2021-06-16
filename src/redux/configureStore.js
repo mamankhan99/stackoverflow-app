@@ -7,8 +7,10 @@ import {applyMiddleware, combineReducers, createStore} from 'redux';
 import authenticationReducer from './ducks/authentication';
 import registrationReducer from './ducks/registration';
 import profileReducer from './ducks/profile';
+import commentReducer from './ducks/comment';
+import questionReducer from './ducks/question';
 import homeReducer from './ducks/home';
-
+import tagReducer from './ducks/tag';
 
 const persistConfig = {
     key: 'root',
@@ -17,8 +19,10 @@ const persistConfig = {
         'authentication',
         'registration',
         'profile',
-        'home'
-
+        'home',
+        'question',
+        'comment',
+        'tag'
     ]
 }
 
@@ -36,7 +40,9 @@ const reducer = combineReducers({
     registration: registrationReducer,
     profile: profileReducer,
     home: homeReducer,
-
+    question: questionReducer,
+    comment: commentReducer,
+    tag: tagReducer,
 });
 
 const store = createStore(
